@@ -1,0 +1,7 @@
+@import '../../../css/variables.scss';
+
+.tab-interceptors {
+  margin-top: 0;
+  padding: 1.5em .75em;
+  min-height: calc(#{$FULL_HEIGHT} - 48px);
+}

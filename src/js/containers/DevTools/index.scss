@@ -1,0 +1,25 @@
+@import '../../../css/variables.scss';
+
+.dev-tools {
+  .avatar-GET {
+    background: green;
+  }
+
+  .avatar-POST {
+    background: blue;
+  }
+
+  .avatar-PUT {
+    background: red;
+  }
+
+  .avatar-checked {
+    background: $primary;
+  }
+
+  .avatar-unchecked {
+    background: transparent;
+    border: 2px solid $primary;
+    border-radius: 861112px;
+  }
+}

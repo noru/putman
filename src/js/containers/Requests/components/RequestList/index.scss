@@ -1,0 +1,38 @@
+
+@import '../../../../../css/variables.scss';
+
+.request-list {
+  border-right: 1px solid $lightgrey;
+  &.column {
+    padding: 0;
+  }
+
+  .filter {
+    padding: 0 1em 1em;
+    border-bottom: 1px solid $lightgrey;
+  }
+
+  .actions {
+    padding: 0 1em 1em;
+    margin-bottom: 0;
+
+    .clear-btn {
+      &:hover {
+        color: #1890ff;
+      }
+      margin-left: .5em;
+    }
+  }
+
+  .request-item {
+    cursor: pointer;
+    padding-left: 1em;
+    &:hover {
+      background: $lightgrey;
+    }
+
+    &.selected {
+      background: $lightblue;
+    }
+  }
+}

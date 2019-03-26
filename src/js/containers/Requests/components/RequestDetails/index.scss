@@ -1,0 +1,25 @@
+.request-detail {
+
+  .ant-page-header {
+    padding: 1em;
+  }
+
+  .ant-avatar {
+    margin-right: .8em;
+  }
+
+  .request-info {
+    &.box {
+      padding: 0 .5em;
+      margin-top: 1em;
+    }
+  }
+
+  .response-info {
+    padding: 1em;
+
+    textarea {
+      max-height: unset;
+    }
+  }
+}

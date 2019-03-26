@@ -1,0 +1,9 @@
+$ENV: 'development' !default;
+$FULL_HEIGHT: 100vh;
+@if ($ENV == 'production') {
+  $FULL_HEIGHT: 125vh;
+}
+
+$lightgrey: #d9d9d9;
+$lightblue: #e6f7ff;
+$primary: #1890ff;

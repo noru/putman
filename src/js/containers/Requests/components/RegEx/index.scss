@@ -1,0 +1,12 @@
+.regex-switch {
+  width: 1.5em;
+  margin-left: 5px;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  border-radius: 3px;
+
+  &.regex-switch-on {
+    background: #c9c9c9;
+  }
+}

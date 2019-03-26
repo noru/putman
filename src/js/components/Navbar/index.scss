@@ -1,0 +1,16 @@
+nav.ext-navbar {
+  padding: 0 2em;
+  margin-bottom: 0 !important;
+  box-shadow: 0 2px 8px #f0f1f2;
+
+  .logo {
+    margin-right: 3em;
+  }
+
+  .action {
+    >* {
+      min-width: 113px;
+      margin-left: .5em;
+    }
+  }
+}

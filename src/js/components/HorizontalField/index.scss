@@ -1,0 +1,13 @@
+.horizontalfield-wrapper {
+
+  &.columns:not(:last-child) {
+    margin-bottom: 0;
+  }
+
+  label {
+    font-weight: bold;
+    color: black;
+    text-align: right;
+  }
+
+}
