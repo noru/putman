@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { withRouter } from 'react-router-dom'
 import { Menu, Icon, Button } from 'antd'
 import './index.scss'
@@ -8,15 +8,17 @@ const Tabs = [
   { key: '/interceptors', name: 'Interceptors', icon: 'api' },
 ]
 
-export function Navbar({ history }) {
-  let [tab, setTab] = useState(history.location.pathname || Tabs[0].key)
+export function Navbar({ history, location }) {
+  let tab = location.pathname
+  if (tab === '/') {
+    tab = Tabs[0].key
+  }
   return (
     <nav className="ext-navbar level">
       <div className="level-item level-left">
         <div className="logo">PutMan Logo</div>
         <Menu
           onClick={param => {
-            setTab(param.key)
             history.push(param.key)
           }}
           selectedKeys={[tab]}

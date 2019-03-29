@@ -6,7 +6,8 @@
   "scripts": {
     "clean": "cross-env rimraf dist",
     "dev": "node ./src/devServer.js",
-    "build": "npm run clean && cross-env NODE_ENV=production webpack --config ./config/webpack.config.prod.js --progress"
+    "build": "npm run clean && cross-env NODE_ENV=production webpack --config ./config/webpack.config.prod.js --progress",
+    "build:watch": "npm run clean && cross-env NODE_ENV=production webpack --watch --config ./config/webpack.config.prod.js"
   },
   "repository": {
     "type": "git",
@@ -19,6 +20,7 @@
   },
   "homepage": "https://github.com/noru/my-react-boilerplate#readme",
   "dependencies": {
+    "@types/react-router": "^4.4.5",
     "antd": "^3.15.0",
     "bulma": "^0.7.2",
     "classname": "0.0.0",

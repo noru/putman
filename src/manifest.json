@@ -9,11 +9,22 @@
     "48": "assets/img/icon.jpg",
     "128": "assets/img/icon.jpg"
   },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ],
   "browser_action": {
     "default_icon": "assets/img/icon.jpg",
     "default_title": "这是一个示例Chrome插件",
     "default_popup": "html/popup.html"
   },
+  "web_accessible_resources": ["assets/lib/nise.min.js"],
   "permissions": ["webRequest", "webRequestBlocking", "storage", "http://*/*", "https://*/*"],
   "homepage_url": "https://blog.xiuz.hu",
   "devtools_page": "html/devtools.html"

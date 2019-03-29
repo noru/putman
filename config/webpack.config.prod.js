@@ -19,6 +19,8 @@ module.exports = merge(config, {
   entry: {
     'js/app': path.join(__dirname, '../src/js/index'),
     devtools: path.join(__dirname, '../src/devtools'),
+    content: path.join(__dirname, '../src/content'),
+    background: path.join(__dirname, '../src/background'),
   },
   output: {
     filename: '[name].js',
