@@ -1,8 +1,24 @@
+import { MessageType as Type } from './msg'
+
 const FakeServerScriptId = '$fake$server'
 
 class ContentScript {
   start() {
-    chrome.runtime.onMessage
+    chrome.runtime.onMessage.addListener(this.listener)
+  }
+
+  listener = request => {
+    console.log(request)
+    switch (request.type) {
+      case Type.EnableInterceptor:
+        this.injectFakeServer()
+        alert('enable')
+        // todo
+        break
+      case Type.DisableInterceptor:
+        // todo
+        break
+    }
   }
 
   injectFakeServer() {
@@ -20,9 +36,4 @@ class ContentScript {
   }
 }
 
-setTimeout(
-  () => {
-    new ContentScript().injectFakeServer()
-  },
-  2000
-)
+new ContentScript().start()

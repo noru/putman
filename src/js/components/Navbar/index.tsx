@@ -2,6 +2,7 @@ import React from 'react'
 import { withRouter } from 'react-router-dom'
 import { Menu, Icon, Button } from 'antd'
 import './index.scss'
+import MsgService from '../../messageService'
 
 const Tabs = [
   { key: '/requests', name: 'Requests', icon: 'mail' },
@@ -41,7 +42,7 @@ export function Navbar({ history, location }) {
           </Button>
         )}
         {tab === '/interceptors' && (
-          <Button type="danger">
+          <Button type="danger" onClick={() => MsgService.enableInterceptor()}>
             <Icon type="play-circle" />
             Intercept
           </Button>
